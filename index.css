@@ -22,64 +22,20 @@ html{
     overflow-x: hidden;
 }
 
-body{
-    background: var(--bg-color);
-    color: var(--text-color);
-    position: relative;
-    overflow-x: hidden;
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(270deg, #00abf0, #444, #000);
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
 }
 
-/*======================= MESH ANIMADO =======================*/
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 30%, #00abf0 2px, transparent 0),
-                radial-gradient(circle at 50% 70%, #888888 2px, transparent 0),
-                radial-gradient(circle at 80% 20%, #000000 2px, transparent 0);
-    background-size: 200px 200px;
-    z-index: -1;
-    pointer-events: none;
-    animation: meshMove 30s linear infinite;
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Animación de movimiento */
-@keyframes meshMove {
-    0% {
-        background-position: 0 0, 50px 50px, 100px 100px;
-    }
-    50% {
-        background-position: 100px 100px, 0 200px, 150px 50px;
-    }
-    100% {
-        background-position: 0 0, 50px 50px, 100px 100px;
-    }
-}
-
-/* Opcional: efecto de líneas entre puntos usando pseudo-elemento extra */
-body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 50px),
-        repeating-linear-gradient(-45deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 50px);
-    z-index: -1;
-    pointer-events: none;
-    animation: linesMove 40s linear infinite;
-}
-
-@keyframes linesMove {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(-50px, 50px); }
-    100% { transform: translate(0, 0); }
-}
 /*======================= HEADER =======================*/
 .header{
     position: fixed;
