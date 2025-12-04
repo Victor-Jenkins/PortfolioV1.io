@@ -1,5 +1,4 @@
-*{
-    
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,24 +7,47 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
-    
-    }
+}
 
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
 
-    :root{
-        --bg-color:#081b29;
-        --second-bg-color:#112e42;
-        --text-color:#ededed;
-        --main-color:#00abf0;
-    }
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
 
-    html{
-        font-size: 62.5%;
-    overflow-x: hidden;}
-
-body{
+body {
     background: var(--bg-color);
     color: var(--text-color);
+    position: relative;
+    z-index: 0;
+}
+
+/* MESH ANIMADO */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(45deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1; /* detrás de todo */
+    pointer-events: none;
+    animation: meshMove 20s linear infinite;
+}
+
+@keyframes meshMove {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 100px 100px, -100px -100px; }
 }
 
 .header{
