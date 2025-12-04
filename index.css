@@ -34,19 +34,18 @@ body{
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: transparent;
+    background: linear-gradient(to right, #00abf0, #00abf0); /* color azul inicial */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    transition: .3s;
-    
-
-
+    transition: background 0.8s ease; /* transición suave */
 }
+
 .sticky{
-background: var(--second-bg-color);
+    background: linear-gradient(to right, #222, #111); /* gris-negro difuminado */
 }
+
 
 .logo{
     font-size: 2.5rem;
