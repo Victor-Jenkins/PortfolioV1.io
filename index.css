@@ -1,6 +1,4 @@
-*{
-    
-    margin: 0;
+margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
@@ -26,6 +24,336 @@
 body{
     background: var(--bg-color);
     color: var(--text-color);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 .header{
@@ -34,18 +362,19 @@ body{
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: linear-gradient(to right, #00abf0, #00abf0); /* color azul inicial */
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    transition: background 0.8s ease; /* transición suave */
-}
+    transition: .3s;
+    
 
+
+}
 .sticky{
-    background: linear-gradient(to right, #222, #111); /* gris-negro difuminado */
+background: var(--second-bg-color);
 }
-
 
 .logo{
     font-size: 2.5rem;
@@ -230,30 +559,32 @@ opacity: 8;
 
 }
 .cols {
-  display: flex;
-    flex-direction: column; /* Pone los hijos en columna */
-    align-items: center;    /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente si hace falta */
-    gap: 4rem;              /* Espacio entre los iframes */
+   display: flex;
+
+   margin:auto;
+   padding:auto;
+margin-bottom: 0;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
     width: 100%;
+      height: auto;
+}
 
 
 
 .col1 {
-   width: 100%;
-    max-width: 600px; /* Ajusta según tus iframes */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido dentro de cada columna */
+display: flex;
+
+ align-items: center;
+margin:30px;
 
 }
 
 .col2 {
-   width: 100%;
-    max-width: 600px; /* Ajusta según tus iframes */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido dentro de cada columna */
+display: flex;
+
+    align-items: center;
 
 }
 
